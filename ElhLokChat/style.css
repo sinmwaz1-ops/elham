@@ -1,0 +1,87 @@
+/* تحديد ألوان مخصصة لثيم ElhLok */
+:root {
+    --elhlok-primary: #5A5480; /* لون بنفسجي غامق وأنيق */
+    --elhlok-secondary: #D9D2E9; /* بنفسجي فاتح للخلفيات */
+    --elhlok-text: #1a1a1a;
+    --elhlok-bubble-self: #5A5480; /* لون فقاعة الرسائل الخاصة */
+    --elhlok-bubble-other: #EAEAEA; /* لون فقاعة الطرف الآخر */
+}
+
+/* الألوان الأساسية */
+.bg-light-purple {
+    background-color: var(--elhlok-secondary) !important;
+}
+
+.text-primary-elhlok {
+    color: var(--elhlok-primary) !important;
+}
+
+.btn-primary-elhlok {
+    background-color: var(--elhlok-primary);
+    border-color: var(--elhlok-primary);
+    transition: background-color 0.3s;
+}
+
+.btn-primary-elhlok:hover {
+    background-color: #4A4470; /* درجة أغمق عند التمرير */
+    border-color: #4A4470;
+}
+
+/* تصميم بطاقة الدخول */
+.custom-login-card {
+    max-width: 400px;
+    width: 90%;
+    border-radius: 15px;
+}
+
+/* تصميم نافذة الدردشة */
+.chat-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px; /* تحديد عرض محدد لتركيز المحادثة */
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.chat-main {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+/* تصميم فقاعات الرسائل */
+.message {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.message-text {
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 75%;
+    word-wrap: break-word;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.self {
+    justify-content: flex-end; /* رسالة المرسل (الهام/ملوك نفسه) */
+}
+
+.self .message-text {
+    background-color: var(--elhlok-bubble-self);
+    color: white;
+    border-bottom-right-radius: 5px;
+}
+
+.other {
+    justify-content: flex-start; /* رسالة الطرف الآخر */
+}
+
+.other .message-text {
+    background-color: var(--elhlok-bubble-other);
+    color: var(--elhlok-text);
+    border-bottom-left-radius: 5px;
+}
